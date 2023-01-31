@@ -4,6 +4,7 @@ import dgram, { RemoteInfo } from 'dgram'
 
 const domain = /7yue/
 const targetIp = '127.0.0.1'
+// 本地 DNS 服务
 const fallbackServers = ['192.168.39.15', '192.168.39.140']
 
 const server = dgram.createSocket('udp4')
@@ -138,3 +139,7 @@ function forward(msg: Buffer, rinfo: RemoteInfo) {
     })
   })
 }
+
+
+
+// https://juejin.cn/post/7105620424368586782#heading-2
